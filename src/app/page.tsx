@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Hero from "./componrnts/Hero";
 import Programs from "./componrnts/Programs";
 import Reasons from "./componrnts/Reasons";
