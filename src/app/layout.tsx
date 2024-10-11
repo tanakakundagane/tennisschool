@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import {M_PLUS_2} from 'next/font/google'
 
-const m_PLUS_2 = M_PLUS_2({ subsets: ['latin']});
+const mPlus2 = M_PLUS_2({ subsets: ['latin']});
 
 export const metadata: Metadata = {
   title: "Origin.テニススクール",
@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body className={m_PLUS_2.className}>
+      <body className={mPlus2.className}>
         {children}
       </body>
     </html>

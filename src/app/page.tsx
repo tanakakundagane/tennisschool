@@ -1,10 +1,10 @@
-import Hero from "./componrnts/Hero";
-import Programs from "./componrnts/Programs";
-import Reasons from "./componrnts/Reasons";
-import Plans from "./componrnts/Plans";
-import Testimonials from "./componrnts/Testimonials";
-import Geen from "./componrnts/Geen";
-import Footer from "./componrnts/Footer";
+import Hero from "./components/Hero";
+import Programs from "./components/Programs";
+import Reasons from "./components/Reasons";
+import Plans from "./components/Plans";
+import Testimonials from "./components/Testimonials";
+import Geen from "./components/Geen";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return(

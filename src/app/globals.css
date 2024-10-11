@@ -1,4 +1,4 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -12,7 +12,7 @@ main{
   overflow:hidden;
 }
 
-::-webkit-scrollber{
+::-webkit-scrollbar{
   display:none;
 }
 
@@ -33,4 +33,65 @@ main{
   border-radius:50%;
   filter:blur(150px);
   z-index:-20;
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+main {
+  background-image: url('/assets/bgimageglobalscss.png');
+  background-color: #483d8b;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  transform: translate3d(0, 0, 0);
+  overflow: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.stroke-text {
+  color: transparent;
+  font-family: M_PLUS_2, sans-serif;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.normal-case {
+  text-transform: none;
+}
+
+.blur {
+  background: #ff8c00;
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(150px);
+  z-index: -20;
 }
