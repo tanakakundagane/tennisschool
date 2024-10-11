@@ -13,7 +13,7 @@ const Geen = () => {
         </div>
         <div>
           <span>レベルアップ</span>
-          <span className="stroke-text">できる！</span>
+          <span className="stroke-text">します！</span>
         </div>
       </div>
 
