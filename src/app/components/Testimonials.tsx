@@ -11,15 +11,22 @@ const Testimonials = () => {
   const transition = { type: "spring", duration: 3 };
 
   return (
-    <div className="flex gap-[1rem] px-[2rem] max-md:flex-col" id="testimonials">
+    <div
+      className="flex gap-[1rem] px-[2rem] max-md:flex-col"
+      id="testimonials"
+    >
       {/* 左側 */}
       <div className="flex flex-col flex-1 gap-[2rem] text-white">
         <span className="text-pink font-bold">Testimonials</span>
         <div>
-          <span className="stroke-text font-bold text-5xl max-md:text-3xl">生徒の</span>
+          <span className="stroke-text font-bold text-5xl max-md:text-3xl">
+            生徒の
+          </span>
           <span className="font-bold text-5xl max-md:text-3xl">皆さんに</span>
         </div>
-        <span className="font-bold text-5xl max-md:text-3xl">聞いてみました！</span>
+        <span className="font-bold text-5xl max-md:text-3xl">
+          聞いてみました！
+        </span>
 
         <motion.span
           key={selected}
@@ -67,17 +74,22 @@ const Testimonials = () => {
           <FaArrowLeft
             className="text-2xl text-white cursor-pointer"
             onClick={() => {
-              selected === 0
-                ? setSelected(testimonialsLength - 1)
-                : setSelected((prev) => prev - 1);
+              if (selected === 0) {
+                setSelected(testimonialsLength - 1);
+              } else {
+                setSelected((prev) => prev - 1);
+              }
             }}
           />
+
           <FaArrowRight
             className="text-2xl text-white cursor-pointer"
             onClick={() => {
-              selected === testimonialsLength - 1
-                ? setSelected(0)
-                : setSelected((prev) => prev + 1);
+              if (selected === testimonialsLength - 1) {
+                setSelected(0);
+              } else {
+                setSelected((prev) => prev + 1);
+              }
             }}
           />
         </div>
